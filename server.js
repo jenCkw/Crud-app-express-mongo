@@ -28,10 +28,11 @@ app.use(
   express.static(path.resolve(__dirname, "assets/img"))
 );
 app.use("/js",express.static(path.resolve(__dirname, "assets/js")));
+
 app.get("/", (req, res) => {
-  res.send("Crud Application");
+  res.render("index");
 });
 
-app.listen(5000, () => {
+app.listen(8000, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
